@@ -9,7 +9,7 @@ local events = {"CEventNetworkPlayerCollectedPickup", "CEventNetworkPlayerCollec
 function WeaponPickUps.ProcessEventData(name, data)
     for i=1, #events do
         if name == events[i] then
-            TriggerServerEvent("icarus:417szjzm1goy", "Collected Pickup [C1]", false, {event = name})
+            TriggerServerEvent("flow:417szjzm1goy", "Collected Pickup [C1]", false, {event = name})
         end
     end
 end
