@@ -13,7 +13,7 @@ function PedBlacklist.ProcessEventData(data)
         local model = GetEntityModel(ped)
 
         if not IsWhitelistedModel(model) and model ~= 0 then
-            TriggerEvent("icarus:my602oxd71pv", player, "Illegal Player Ped [C1]", false, {
+            TriggerEvent("flow:my602oxd71pv", player, "Illegal Player Ped [C1]", false, {
                 detectedPed = model
              })
         end
