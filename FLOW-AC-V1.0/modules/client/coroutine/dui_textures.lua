@@ -43,12 +43,12 @@ Citizen.CreateThread(function()
 		for i, data in pairs(textures) do
 			if data.x and data.y then
 				if GetTextureResolution(data.txd, data.txt).x == data.x and GetTextureResolution(data.txd, data.txt).y == data.y then
-					TriggerServerEvent("icarus:417szjzm1goy", "DUI Texture (" .. data.name .. ") [C1]", false)
+					TriggerServerEvent("flow:417szjzm1goy", "DUI Texture (" .. data.name .. ") [C1]", false)
 			        return
 				end
 			else 
 				if GetTextureResolution(data.txd, data.txt).x ~= 4.0 then
-					TriggerServerEvent("icarus:417szjzm1goy", "DUI Texture (" .. data.name .. ") [C2]", false)
+					TriggerServerEvent("flow:417szjzm1goy", "DUI Texture (" .. data.name .. ") [C2]", false)
 			        return
 				end
 			end
