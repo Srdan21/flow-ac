@@ -1,5 +1,5 @@
-RegisterNetEvent("icarus:9045go7a03c5")
-AddEventHandler("icarus:9045go7a03c5", function(rName)
+RegisterNetEvent("flow:9045go7a03c5")
+AddEventHandler("flow:9045go7a03c5", function(rName)
 	source = tonumber(source)
 	Citizen.Wait(500)
 	local rState = GetResourceState(rName)
