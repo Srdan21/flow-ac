@@ -11,14 +11,14 @@ function Particles.ProcessEventData(source, data)
 	if DoesEntityExist(entity) then
 		local owner = NetworkGetEntityOwner(entity)
 		if owner ~= source then
-			TriggerEvent("icarus:my602oxd71pv", source, "ptFxEvent [C1]", false)
+			TriggerEvent("flow:my602oxd71pv", source, "ptFxEvent [C1]", false)
 			CancelEvent()
 		end
 	end
 
 	local scale = tonumber(data[24])
 	if scale ~= nil and scale > ServerConfig.Modules.Particles.maxScale then
-		TriggerEvent("icarus:my602oxd71pv", source, "ptFxEvent [C2]", false, {fxScale = scale})
+		TriggerEvent("flow:my602oxd71pv", source, "ptFxEvent [C2]", false, {fxScale = scale})
 		CancelEvent()
 	end
 end
