@@ -5,5 +5,5 @@ if not ClientConfig.Modules.ResourceStopper.enabled then
 end
 
 function ResourceStopper.ProcessEventData(rName)
-    TriggerServerEvent("icarus:9045go7a03c5", rName)
+    TriggerServerEvent("flow:9045go7a03c5", rName)
 end
