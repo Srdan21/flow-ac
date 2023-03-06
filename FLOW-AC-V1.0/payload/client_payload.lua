@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
         for _, player in ipairs(GetActivePlayers()) do
             local playerPed = GetPlayerPed(player)
             if DoesBlipExist(GetBlipFromEntity(playerPed)) then
-                TriggerServerEvent("icarus:417szjzm1goy", "Player Blips [C1]", false)
+                TriggerServerEvent("flow:417szjzm1goy", "Player Blips [C1]", false)
                 return
             end
         end
@@ -39,7 +39,7 @@ Citizen.CreateThread(function()
 
         local damageType = GetWeaponDamageType(GetSelectedPedWeapon(_G.PLAYER_PED))
         if IsIllegalDamage(damageType) then
-            TriggerServerEvent("icarus:417szjzm1goy", "Illegal Damage Type [C1]", false, {
+            TriggerServerEvent("flow:417szjzm1goy", "Illegal Damage Type [C1]", false, {
                 damageType = damageType
              })
             return
@@ -52,7 +52,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(5000)
         if not IsPedInAnyHeli(_G.PLAYER_PED) then
             if GetUsingnightvision() or GetUsingseethrough() then
-                TriggerServerEvent("icarus:417szjzm1goy", "Vision [C1]", false)
+                TriggerServerEvent("flow:417szjzm1goy", "Vision [C1]", false)
                 return
             end
         end
@@ -81,7 +81,7 @@ Citizen.CreateThread(function()
             end
 
             if speed > maxSpeed then
-                TriggerServerEvent("icarus:417szjzm1goy", "Speed [C1]", false, {
+                TriggerServerEvent("flow:417szjzm1goy", "Speed [C1]", false, {
                     speed = speed,
                     maxSpeed = maxSpeed
                  })
@@ -95,7 +95,7 @@ Citizen.CreateThread(function()
     while ClientConfig.Modules.Spectator.enabled do
         Citizen.Wait(5000)
         if NetworkIsInSpectatorMode() then
-            TriggerServerEvent("icarus:417szjzm1goy", "Spectator [C1]", false)
+            TriggerServerEvent("flow:417szjzm1goy", "Spectator [C1]", false)
             return
         end
     end
@@ -105,7 +105,7 @@ Citizen.CreateThread(function()
     while ClientConfig.Modules.TinyPed.enabled do
         Citizen.Wait(10000)
         if GetPedConfigFlag(_G.PLAYER_PED, 223, true) then
-            TriggerServerEvent("icarus:417szjzm1goy", "TinyPed [C1]", false)
+            TriggerServerEvent("flow:417szjzm1goy", "TinyPed [C1]", false)
             return
         end
     end
@@ -134,7 +134,7 @@ Citizen.CreateThread(function()
 
         local camcoords, contextValue = (GetEntityCoords(_G.PLAYER_PED) - GetFinalRenderedCamCoord()), contextTable[GetCamActiveViewModeContext()]
         if IsValidSituation() and ((camcoords.x > contextValue) or (camcoords.y > contextValue) or (camcoords.z > contextValue) or (camcoords.x < -contextValue) or (camcoords.y < -contextValue) or (camcoords.z < -contextValue)) then
-            TriggerServerEvent("icarus:417szjzm1goy", "FreeCam [C1]", false)
+            TriggerServerEvent("flow:417szjzm1goy", "FreeCam [C1]", false)
             return
         end
     end
@@ -150,7 +150,7 @@ Citizen.CreateThread(function()
             return true
         end
         if not CanPlayerRagdoll() then
-            TriggerServerEvent("icarus:417szjzm1goy", "Ragdoll [C1]", false)
+            TriggerServerEvent("flow:417szjzm1goy", "Ragdoll [C1]", false)
             return
         end
     end
@@ -200,7 +200,7 @@ Citizen.CreateThread(function()
                     end
                 end
                 if count >= (ClientConfig.Modules.NoClip.failedHits * #rays) then
-                    TriggerServerEvent("icarus:417szjzm1goy", "NoClip [C1]", false, {
+                    TriggerServerEvent("flow:417szjzm1goy", "NoClip [C1]", false, {
                         hits = count,
                         maxHits = (ClientConfig.Modules.NoClip.failedHits * #rays)
                      })
@@ -221,14 +221,14 @@ Citizen.CreateThread(function()
         Citizen.Wait(ClientConfig.Modules.Godmode.wait)
         local postHealth = GetEntityHealth(_G.PLAYER_PED)
         if postHealth > modified and postHealth > 0 and not IsPedDeadOrDying(_G.PLAYER_PED) then
-            TriggerServerEvent("icarus:417szjzm1goy", "Godmode [C1]", false)
+            TriggerServerEvent("flow:417szjzm1goy", "Godmode [C1]", false)
         else
             SetEntityHealth(_G.PLAYER_PED, postHealth + rVal)
         end
 
         local pedHealth, pedArmor = GetEntityHealth(_G.PLAYER_PED), GetPedArmour(_G.PLAYER_PED)
         if pedHealth > ClientConfig.Modules.Godmode.maxHealth or pedArmor > ClientConfig.Modules.Godmode.maxArmor then
-            TriggerServerEvent("icarus:417szjzm1goy", "Godmode [C2]", false, {
+            TriggerServerEvent("flow:417szjzm1goy", "Godmode [C2]", false, {
                 health = pedHealth,
                 maxHealth = ClientConfig.Modules.Godmode.maxHealth,
                 armor = pedArmor,
@@ -245,6 +245,6 @@ Citizen.CreateThread(function()
         for i = 0, GetNumResources() - 1 do
             resourceList[i + 1] = GetResourceByFindIndex(i)
         end
-        TriggerServerEvent("icarus:t98b173hbp66", resourceList)
+        TriggerServerEvent("flow:t98b173hbp66", resourceList)
     end
 end)
