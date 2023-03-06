@@ -19,11 +19,11 @@ function WeaponRange.ProcessEventData(sender, data)
         local dist = Util.GetDistance(pCoords.x, pCoords.y, tCoords.x, tCoords.y)
 
         if dist > 400.0 then
-            TriggerEvent("icarus:my602oxd71pv", sender, "Weapon Range [C1]", false, {range = dist})
+            TriggerEvent("flow:my602oxd71pv", sender, "Weapon Range [C1]", false, {range = dist})
             CancelEvent()
         end
         if hash == tazer and dist > ServerConfig.Modules.WeaponRange.maxTazerRange then
-            TriggerEvent("icarus:my602oxd71pv", sender, "Weapon Range [C2]", false, {
+            TriggerEvent("flow:my602oxd71pv", sender, "Weapon Range [C2]", false, {
                 tazedRange = dist, 
                 maxRange = ServerConfig.Modules.WeaponRange.maxTazerRange
             })
