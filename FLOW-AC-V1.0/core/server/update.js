@@ -38,7 +38,7 @@ function checkForUpdates() {
     getLatestGithubRelease(user, repo).then((release) => {
         release = release.slice(1);
         if (release != currentVersion) {
-            console.log("Esta versión de FLOW-AC no está actualizada. Por favor, actualice a la última versión: " + release + " | Versión actual: v" + currentVersion + "\nhttps://github.com/EinS4ckZwiebeln/IcarusAdvancedAnticheat/releases\n");
+            console.log("Esta versión de FLOW-AC no está actualizada. Por favor, actualice a la última versión: " + release + " | Versión actual: v" + currentVersion + "\nhttps://github.com/Srdan21/flow-ac/releases\n");
         }
     }).catch((err) => {
         console.error(err);
