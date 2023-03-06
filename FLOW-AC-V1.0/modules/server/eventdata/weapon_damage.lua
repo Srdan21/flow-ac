@@ -18,7 +18,7 @@ end
 function WeaponDamage.ProcessEventData(sender, data)
     local weaponHash = data["weaponType"]
     if IsWeaponBlacklisted(weaponHash) then
-        TriggerEvent("icarus:my602oxd71pv", sender, "Illegal Weapon Damage [C1]", false, {
+        TriggerEvent("flow:my602oxd71pv", sender, "Illegal Weapon Damage [C1]", false, {
             weaponHash = weaponHash
         })
         CancelEvent() 
