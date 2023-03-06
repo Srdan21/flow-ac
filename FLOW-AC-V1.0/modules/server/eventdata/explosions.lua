@@ -17,10 +17,10 @@ end
 function ExplosionFilter.ProcessEventData(sender, data)
     local scale, type, invisible = data["damageScale"], data["explosionType"], data["isInvisible"]
     if not IsExplosionWhitelisted(type) then
-        TriggerEvent("icarus:my602oxd71pv", sender, "Explosion Event [C1]", false, {explosionType = type})
+        TriggerEvent("flow:my602oxd71pv", sender, "Explosion Event [C1]", false, {explosionType = type})
     elseif scale > 1.0 then
-        TriggerEvent("icarus:my602oxd71pv", sender, "Explosion Event [C2]", false, {explosionScale = scale})
+        TriggerEvent("flow:my602oxd71pv", sender, "Explosion Event [C2]", false, {explosionScale = scale})
     elseif invisible then
-        TriggerEvent("icarus:my602oxd71pv", sender, "Explosion Event [C3]", false)     
+        TriggerEvent("flow:my602oxd71pv", sender, "Explosion Event [C3]", false)     
     end
 end
