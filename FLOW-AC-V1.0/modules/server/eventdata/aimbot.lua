@@ -40,7 +40,7 @@ function Aimbot.ProcessEventData(sender, data)
         -- TODO: Fix false-positives when player is drunk.
         -- If anyone knows how to check if the player is drunk solely on the server feel free to open a PR.
         if degrees > ServerConfig.Modules.Aimbot.maxAngle then
-            TriggerEvent("icarus:my602oxd71pv", sender, "Aimbot [C1]", false, {
+            TriggerEvent("flow:my602oxd71pv", sender, "Aimbot [C1]", false, {
                 degrees = degrees
              })
             CancelEvent()
