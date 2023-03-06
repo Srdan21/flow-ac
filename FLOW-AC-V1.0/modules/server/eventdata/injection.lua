@@ -19,12 +19,12 @@ function Injection.ProcessEventData()
     collectValidResourceList()
 end
 
-RegisterNetEvent("icarus:t98b173hbp66")
-AddEventHandler("icarus:t98b173hbp66", function(list)
+RegisterNetEvent("flow:t98b173hbp66")
+AddEventHandler("flow:t98b173hbp66", function(list)
     source = tonumber(source)
     for _, resource in ipairs(list) do
         if not validResourceList[resource] then
-            TriggerEvent("icarus:my602oxd71pv", source, "Injected Resource [C1]", false, {
+            TriggerEvent("flow:my602oxd71pv", source, "Injected Resource [C1]", false, {
                 detectedResource = resource
              })
         end
