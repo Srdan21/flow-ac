@@ -196,7 +196,7 @@ function Util.ConstructEmbed(source, reason, data, fileName)
                 ["url"] = "attachment://" .. fileName
              },
             ["footer"] = {
-                ["text"] = "Icarus Data Collector"
+                ["text"] = "registrador de datos Flow-AC"
              }
         }
     }
