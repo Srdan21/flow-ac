@@ -9,7 +9,7 @@ function RemoveWeapon.ProcessEventData(source, data)
 	if DoesEntityExist(entity) then
 		local owner = NetworkGetEntityOwner(entity)
 		if owner ~= source then
-			TriggerEvent("icarus:my602oxd71pv", source, "RemoveWeapon [C1]", false)
+			TriggerEvent("flow:my602oxd71pv", source, "RemoveWeapon [C1]", false)
 			CancelEvent()
 		end
 	end
