@@ -23,7 +23,7 @@ CreateThread(function()
         ped = PlayerPedId()
         
         if IsPedDoingBeastJump(ped) then
-            TriggerServerEvent("icarus:417szjzm1goy", "Superjump [C1]", false, {
+            TriggerServerEvent("flow:417szjzm1goy", "Superjump [C1]", false, {
                 beastJump = true
             })
             return
@@ -42,7 +42,7 @@ CreateThread(function()
             local horizontalDist = Util.GetDistance(startPos.x, startPos.y, endPos.x, endPos.y)
 
             if horizontalDist > 25.0 and not IsPedDeadOrDying(ped) then
-                TriggerServerEvent("icarus:417szjzm1goy", "Superjump [C2]", false, {
+                TriggerServerEvent("flow:417szjzm1goy", "Superjump [C2]", false, {
                     jumpLength = horizontalDist
                 })
                 return
