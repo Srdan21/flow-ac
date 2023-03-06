@@ -2,9 +2,9 @@ fx_version "cerulean"
 
 game "gta5"
 
-description "Icarus Advanced Anticheat"
+description "FLOW-AC FIVEM"
 
-version "1.2.3"
+version "1.0.0"
 
 lua54 "yes"
 
